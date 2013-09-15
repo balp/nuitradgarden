@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static "style.css" %}" />
+    <title>{% block title %}Nu i trädgården{% endblock %}</title>
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul class="sidebar">
+            <li class="sidebar" class="odd_row"><a class="sidebar" href="/">Hem</a></li>
+            <li class="sidebar" class="even_row"><a class="sidebar" href="/blog/">Blog</a></li>
+            <li class="sidebar" class="odd_row"><a class="sidebar" href="/vaxter/">Växter</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+    <p class="error">Sorry, that's not a valid username or password</p>
+  {% endif %}
+
+  
+  <table class="userinfo">
+  <thead>
+  <tr><th class="username" colspan="2"> {{ user }} </th></tr>
+  </thead>
+  <tbody>
+    
+    
+    <tr class="even_row"><th class="userheader">Username</th><td class="userinfo"> {{user.username }} </td></tr>
+    <tr class="odd_row"><th class="userheader">Förnamn</th><td class="userinfo"> {{user.first_name }} </td></tr>
+    <tr class="even_row"><th class="userheader">Efternamn</th><td class="userinfo"> {{user.last_name }} </td></tr>
+    <tr class="odd_row"><th class="userheader">Epost</th><td class="userinfo"> {{user.email }} </td></tr>
+    <tr class="even_row"><th class="userheader">Senast inloggad</th><td class="userinfo"> {{user.last_login }} </td></tr>
+    <tr class="odd_row"><th class="userheader">Medlem sen</th><td class="userinfo"> {{user.date_joined }} </td></tr>
+  </tbody>
+  </table>
+ 
+{% endblock %}
