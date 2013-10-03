@@ -15,3 +15,5 @@ class Sort(models.Model):
 class Plant(models.Model):
     sort = models.ForeignKey(Sort)
     user = models.ForeignKey(User)
+    position = models.TextField()
+    planted = models.DateField(blank=True, null=True)

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Plator</h2>
+    <table><tbody>
+        {% for plant in object_list %}
+            <tr>
+                <td> {{ plant.planted.year }} </td>
+                <td><a href="{% url 'plants:detail' plant.id %}">{{ plant.sort.name }}</a></td>
+                <td>{{ plant.position }}</td>
+            </tr>
+        {% endfor %}
+    </tbody></table>
+ 
+{% endblock %}
