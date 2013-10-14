@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if form.errors %}
+    <p class="error">Sorry, that's not a valid username or password</p>
+  {% endif %}
+
+  
+  <table class="userinfo">
+  <thead>
+  <tr><th class="username" colspan="2"> {{ object.sort.name }} </th></tr>
+  </thead>
+  <tbody>
+    
+    <tr class="even_row"><th class="userheader">Var</th><td class="userinfo"> {{object.position }} </td></tr>
+    <tr class="even_row"><th class="userheader">Planterad</th><td class="userinfo"> {{object.planted|date }} </td></tr>
+    <tr class="even_row"><th class="userheader">Om</th><td class="userinfo"> {{object.sort.description }} </td></tr>
+     </tbody>
+  </table>
+ 
+{% endblock %}
